@@ -5,9 +5,9 @@ on: push
 jobs:
   first_job:
     runs-on: ubuntu-latest
-
     steps:
       - name: Hola Mundo
+        run: echo "Hola mundo"
   
   second_job:
     if: ${{ github.ref == 'refs/heads/master' }}
