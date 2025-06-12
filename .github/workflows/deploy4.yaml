@@ -8,9 +8,9 @@ jobs:
 
     steps:
       - name: Hola Mundo
+        run: cat hola.php
   
   second_job:
-    if: ${{ github.ref == 'refs/heads/master' }}
     needs: first_job
     runs-on: ubuntu-latest
 
