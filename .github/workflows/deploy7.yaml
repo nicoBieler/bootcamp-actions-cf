@@ -12,9 +12,16 @@ jobs:
 
     steps:
       - name: Workin dir
-        run: echo $GITHUB_OUTPUT
+        run: ls -al
+      
+      - name: Action
+        uses: actions/checkout@v4
+      
+      - name: Working dir after action
+        run: ls -al
   
   second_job:
+    if: ${{ github.ref == 'refs/heads/master' }}
     needs: first_job
     runs-on: ubuntu-latest
 
