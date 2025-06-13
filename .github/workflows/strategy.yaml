@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy: 
-      martix:
+      matrix:
         message: ["Hola", "CodigoFacilito", "Bootcamp GitHub Action"]
     
     steps:
